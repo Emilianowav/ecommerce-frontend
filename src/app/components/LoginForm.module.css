@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "Integral";
+    src: url(../../../public/fonts/Demo_Fonts/Integralcf-bold.otf);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     width:max-content ; 
+    height: 440px;
+    width: 400px;
+    padding: 32px;
+    gap: 20px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.938);
+}
+
+.title{
+    font-size: 32px;
+    margin-bottom: 24px;
+    font-family: "Integral";
+    display: block;
+    border-bottom: solid black 4px;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+
+.label{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 800;
+}
+.input{
+    width: 100%;
+    padding: 4px 0;
+    box-sizing: border-box;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.699);
+}
+.input:focus{
+    outline-offset:solid 2px;
+    outline: none;
+    
+}
+.buttonContainer{
+    width: 100%;
+}
+.button {
+    width: 100%;
+    padding: 8px 14px;
+    font-size: 18px;
+    font-weight: 800;
+    background-color: #e4fb04;
+    border: 2px solid black;
+    transition: all ease 0.3s;
+    margin-top: 16px;
+  }
+  
+.button:hover {
+    transform: translate(-0.1em, -0.1em);
+    box-shadow: 0.2em 0.2em;
+    cursor: pointer;
+  }
+  
+.button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: none;
+  }
+  
+ .p{
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+  }
+  .link{
+    
+    padding-left: 4px;
+  }
+  .link:hover{
+    text-decoration: underline;
+  }
+  .pPassword{
+    text-align: end;
+    font-size: 12px;
+  }
+  
+.errorMessage{
+  font-weight: 500;
+  line-height: 0px;
+  color: red;
+}

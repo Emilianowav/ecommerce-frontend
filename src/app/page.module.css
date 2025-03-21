@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "Integral";
+    src: url(../../public/fonts/Demo_Fonts/Integralcf-bold.otf);
+}
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    background-color: #1a1a1a;
+    color: white;
+    padding-left: 80px;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.textContainer {
+    width: 100%;
+    text-align: center;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 16px;
+    height: 100%;
+
+    
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+.titleContainer{
+    width: 100%;
+    text-align: start;
+}
+.Pretitle{
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 14px;
+}
+.title {
+    line-height: 48px;
+    font-family: "Integral";
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #e4fb04;
+    text-align: start;
+    border-bottom: solid #c3d904 1px;
+    padding-bottom: 12px;
+}
+
+.subtitle {
+    width: 100%;
+    text-align: start;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.ctaButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #e4fb04;
+    color: #1a1a1a;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 4px;
+    transition: 0.3s;
+    width: max-content;
+    text-decoration: none;
+    transition: all ease .2s;
+    
+}
+
+.ctaButton:hover {
+    background-color: #c3d904;
+    
+  transform: scale(1.1); 
+
+}
+
+.ctaButton:active{
+    
+    transform: scale(1); 
+  }
+.imageContainer {
+    flex: 3;
+    position: relative;
+    height: 100%;
+
+    opacity: 0;
+    animation: imgFadeIn 1s ease-in forwards;
+}
+
+.bannerImage {
+    object-fit: cover;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+@keyframes imgFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

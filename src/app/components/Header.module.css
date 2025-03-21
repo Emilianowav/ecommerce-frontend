@@ -1,0 +1,85 @@
+/* Estilos generales */
+.header {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 2px solid #e4e4e4;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Contenedor */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Barra de búsqueda */
+.searchContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.searchInput {
+    border: none;
+    padding: 8px 12px;
+    width: 250px;
+    outline: none;
+}
+
+.searchButton {
+    background-color: #e4fb04;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    height: 40px;
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navLink:hover {
+    color: #0070f3;
+}
+
+/* Íconos */
+.icons {
+    display: flex;
+    gap: 16px;
+}
+
+.icon {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.icon:hover {
+    color: #0070f3;
+}
