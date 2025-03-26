@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useAuthStore } from "../store/useAuthStore";
 
 export default function Login () {
     const [loginData, setLoginData] = useState({
@@ -11,7 +12,7 @@ export default function Login () {
     const [error, setError] = useState<string>("")
     
     const router = useRouter();
-
+    const login = useAuthStore((state) => (state.login))
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const {name, value} = e.target;
         setLoginData((prevData) => ({
@@ -31,11 +32,18 @@ export default function Login () {
             
             if (response?.data?.token) {
                 localStorage.setItem("token", response.data.token);
-                router.push("/home");
+
+                login({
+                    userId: response.data.user.userId,
+                    userName: response.data.user.userName,
+                    email: response.data.user.email,
+                    role: response.data.user.role
+                })
+
+                router.push("/");
             }
 
-            if(localStorage.getItem("token"))
-            router.push("/")
+            
         } catch (error) {
             if(axios.isAxiosError(error)){
                 const serverError = error.response?.data;

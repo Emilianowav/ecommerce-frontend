@@ -37,7 +37,7 @@ export default function useRegisterForm() {
         setLoading(true)
         setError({});
 
-        let formErrors: { name?: string; email?: string; passwordHash?: string; checkpassword?: string } = {};
+        const formErrors: { name?: string; email?: string; passwordHash?: string; checkpassword?: string } = {};
 
         if (!formData.name) formErrors.name = "El nombre es obligatorio";
         if (!formData.email) formErrors.email = "El correo electrónico es obligatorio";

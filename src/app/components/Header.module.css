@@ -1,37 +1,43 @@
-/* Estilos generales */
+@font-face {
+    font-family: "Integral";
+    src: url(../../../public/fonts/Demo_Fonts/Integralcf-bold.otf);
+}
 .header {
     width: 100%;
     background-color: #fff;
-    border-bottom: 2px solid #e4e4e4;
-    padding: 12px 0;
+    padding: 16px 48px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor */
+
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
 }
 
-/* Logo */
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
+
+.logoSearch {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo{
+    position: relative;
+    width: 150px;
+    height:40px;
 }
 
 /* Barra de búsqueda */
 .searchContainer {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 1px solid #DC1429;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -39,47 +45,132 @@
 .searchInput {
     border: none;
     padding: 8px 12px;
-    width: 250px;
+    width: 220px;
     outline: none;
 }
 
 .searchButton {
-    background-color: #e4fb04;
+    background-color: #DC1429;
+    color: white;
     border: none;
     padding: 8px 12px;
     cursor: pointer;
     height: 40px;
 }
 
-/* Navegación */
-.nav {
+.searchButton:hover {
+    background-color: #c21324;
+}
+
+.storeLink{
+    font-family: "Integral";
     display: flex;
-    gap: 20px;
-}
-
-.navLink {
-    text-decoration: none;
-    color: #333;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     font-size: 16px;
-    font-weight: 600;
+    transition: all ease .15s;
+}
+.storeLink:hover{
+    color: #DC1429;
+}
+.storeIcon{
+    font-size: 32px;
 }
 
-.navLink:hover {
-    color: #0070f3;
-}
-
-/* Íconos */
 .icons {
     display: flex;
-    gap: 16px;
+    align-items: center;
+    gap: 24px;
+    font-size: 24px;
 }
 
 .icon {
     color: #333;
-    text-decoration: none;
-    font-size: 20px;
+    transition: all 0.2s ease;
 }
 
 .icon:hover {
-    color: #0070f3;
+    color: #DC1429;
+    scale: 1.1;
+}
+
+/* Botón de inicio de sesión */
+.loginButton {
+    background-color: #DC1429;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.loginButton:hover {
+    background-color: #c21324;
+}
+
+/* LOADER */
+/* From Uiverse.io by satyamchaudharydev */ 
+.loader {
+    display: block;
+    --height-of-loader: 4px;
+    --loader-color: #DC1429;
+    width: 130px;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+  }
+  
+  .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+    ;
+  }
+  
+  @keyframes moving {
+    50% {
+      width: 100%;
+    }
+  
+    100% {
+      width: 0;
+      right: 0;
+      left: unset;
+    }
+  }
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logoSearch {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .searchContainer {
+        width: 100%;
+    }
+
+    .searchInput {
+        width: 100%;
+    }
+
+    .icons {
+        gap: 16px;
+    }
 }

@@ -5,9 +5,13 @@ export interface Products{
     price: string,
     stock:number,
     category: Category,
-    imageUrl: string
+    images: Images[],
 }
 
 interface Category{
     name: string,
+}
+interface Images{
+    id: number,
+    url: string,
 }
