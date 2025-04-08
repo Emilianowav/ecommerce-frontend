@@ -4,11 +4,12 @@ export interface Products{
     description: string,
     price: string,
     stock:number,
-    category: Category,
+    categories: Category[],
     images: Images[],
 }
 
 interface Category{
+    id:number,
     name: string,
 }
 interface Images{

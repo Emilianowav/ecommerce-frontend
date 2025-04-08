@@ -1,0 +1,89 @@
+.shopContainer {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* 🔍 Buscador */
+.searchBox {
+    display: flex;
+    justify-content: center;
+}
+.searchInput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 📂 Categorías */
+.categories {
+    display: flex;
+    flex-direction: column;
+}
+.categoryTitle {
+    margin-bottom: 12px;
+    border-bottom: solid black 1px;
+}
+.categoryList {
+    list-style: none;
+    padding: 0;
+}
+.categoryItem {
+    padding: 6px 0;
+    cursor: pointer;
+    padding-left: 4px;
+}
+.categoryItem:hover {
+    color: #e4fb04;
+}
+
+/* 🛠️ Filtros */
+.filters {
+    display: flex;
+    flex-direction: column;
+}
+.filterTitle {
+    margin-bottom: 12px;
+    border-bottom: solid black 1px;
+}
+.filterOption {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+.filterCheckbox {
+    cursor: pointer;
+}
+
+/* 🛒 Productos */
+.products {
+    flex-grow: 1;
+}
+.productsTitle {
+    color: white;
+    margin-bottom: 20px;
+}
+.productGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.productCard {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}

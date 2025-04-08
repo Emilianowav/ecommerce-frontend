@@ -1,7 +1,7 @@
 .footer {
-    background-color: #222;
+    background-color: #DC1429;
     color: white;
-    padding: 40px 0;
+    padding: 40px 0 12px 0;
     font-size: 14px;
 }
 
@@ -28,6 +28,8 @@
 
 /* Estilos para los links */
 .section ul {
+    display: flex;
+    gap: 8px;
     list-style: none;
     padding: 0;
 }
@@ -43,29 +45,28 @@
 }
 
 .section a:hover {
-    color: #e4fb04;
+    text-decoration: underline;
 }
 
 /* Redes Sociales */
 .socialIcons {
     display: flex;
-    gap: 10px;
+    gap: 16px;
 }
 
 .socialIcons a {
     color: white;
-    transition: color 0.3s;
+    transition: all 0.3s;
 }
 
 .socialIcons a:hover {
-    color: #e4fb04;
+    scale: 1.2;
 }
 
 /* Copyright */
 .copyright {
     text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #444;
+    margin-top: 12px;
+    padding-top: 12px;
     font-size: 12px;
 }

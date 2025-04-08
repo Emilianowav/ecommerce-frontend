@@ -7,7 +7,6 @@
     flex-direction: column;
     gap: 32px;
     width: 100%;
-    background-color: #1a1a1a;
     padding: 0 48px ;
     padding-bottom: 48px;
     
@@ -24,11 +23,12 @@
     transform: translateX(-30px);
 }
 .title{
-    display: block;
+    width: 100%;
     font-size: 40px;
     text-align: start;
     font-family: "Integral";
     color: #e4fb04;
+    border-bottom: solid #e4fb04 2px;
 }
 
 

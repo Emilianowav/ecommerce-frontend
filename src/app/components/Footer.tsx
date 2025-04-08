@@ -8,8 +8,8 @@ export default function Footer() {
             <div className={styles.container}>
                 {/* Información */}
                 <div className={styles.section}>
-                    <h3>Acerca de Nosotros</h3>
-                    <p>La tienda digital de ... con los mejores productos y precios</p>
+                    <h3>SOLID</h3>
+                    <Link href="/about">Acerca de Nosotros</Link>
                 </div>
 
                 {/* Navegación */}

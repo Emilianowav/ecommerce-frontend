@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Integral";
+    src: url(../../../public/fonts/Demo_Fonts/Integralcf-regular.otf);
+}
+.container{
+    position: relative;
+    cursor: pointer;
+}
+.button:hover{
+    color: #DC1429;
+
+}
+.ul{
+    color: black;
+    width: max-content;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 16px 0;
+    right: 0;
+    box-shadow: 2px 2px 12px #DC1429;
+    border-radius: 4px;
+}
+.li{
+    width: 100%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+    border-bottom: solid 1px #DC1429;
+}
+.li:hover{
+    
+    color: #DC1429;
+    cursor: pointer;
+}
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+    width: 100%;
+
+}
+.icon{
+    font-size: 24px;
+}

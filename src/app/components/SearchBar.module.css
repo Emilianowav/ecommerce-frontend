@@ -1,0 +1,65 @@
+.searchContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #DC1429;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.searchInput {
+    border: none;
+    padding: 8px 12px;
+    outline: none;
+}
+
+.searchButton {
+    color: #DC1429;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+
+.searchedUl {
+    position: absolute;
+    margin-top: 4px;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    list-style: none;
+    overflow-y: auto; 
+    z-index: 1000; 
+}
+
+.searchedLi {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.searchedLi:hover {
+    background: #f5f5f5; /* Efecto hover para destacar */
+}
+
+.objectName {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.objectCategory {
+    font-size: 14px;
+    color: #666;
+}
+
+.objectImage {
+    width: 50px;  
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}

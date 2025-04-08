@@ -1,15 +1,19 @@
 "use client"
 import Link from "next/link";
 import Image from "next/image";
-import styles from "./Header.module.css";
-import Logo from "../../../public/images/Logo.svg";
-import { FaShoppingCart, FaUser, FaSearch, FaStore } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
+// styles
+import styles from "./Header.module.css";
+// assets
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { FiUser } from "react-icons/fi";
+import { IoBagHandleOutline,IoSearch  } from "react-icons/io5";
+import Logo from "../../../public/images/Logo.svg";
 
 export default function Header() {
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const {user, logout, isAuthenticated} = useAuthStore();
+    const {isAuthenticated} = useAuthStore();
     
     useEffect(() => {
         setIsLoading(true)
@@ -20,41 +24,68 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
-                {/* Logo + Buscador */}
                 <div className={styles.logoSearch}>
                     <Link href="/" className={styles.logo}>
                         <Image src={Logo} alt="Logo" fill />
                     </Link>
-                    <div className={styles.searchContainer}>
-                        <input type="text" placeholder="Buscar Producto..." className={styles.searchInput} />
-                        <button className={styles.searchButton}><FaSearch /></button>
-                    </div>
                 </div>
+                <nav className={styles.nav}>
+                    <Link className={styles.storeLink} href="/">Inicio</Link>
+                    <div className={styles.dropdown}>
+                            <span className={styles.storeLink}>Productos <MdKeyboardArrowDown className={styles.arrow}/></span>
+                            <div className={styles.dropdownMenu}>
+                            {/* Columna Mujer */}
+                            <div className={styles.column}>
+                                <h4 className={styles.columnTitle}>Mujer</h4>
+                                <Link href="/shop/ropa/mujer/remera" className={styles.dropdownItem}>Remera</Link>
+                                <Link href="/shop/ropa/mujer/musculosa" className={styles.dropdownItem}>Musculosa</Link>
+                                <Link href="/shop/ropa/mujer/campera" className={styles.dropdownItem}>Campera</Link>
+                            </div>
 
-                <Link className={styles.storeLink} href="/store">
-                Tienda
-                    <div className={styles.storeIcon}>
-                        <FaStore />
+                            {/* Columna Hombre */}
+                            <div className={styles.column}>
+                                <h4 className={styles.columnTitle}>Hombre</h4>
+                                <Link href="/shop/ropa/hombre/remera" className={styles.dropdownItem}>Remera</Link>
+                                <Link href="/shop/ropa/hombre/musculosa" className={styles.dropdownItem}>Musculosa</Link>
+                                <Link href="/shop/ropa/hombre/campera" className={styles.dropdownItem}>Campera</Link>
+                            </div>
+
+                            {/* Columna Accesorios */}
+                            <div className={styles.column}>
+                                <h4 className={styles.columnTitle}>Accesorios</h4>
+                                <Link href="/shop/accesorios/gorra" className={styles.dropdownItem}>Gorra</Link>
+                                <Link href="/shop/accesorios/mochila" className={styles.dropdownItem}>Mochila</Link>
+                                <Link href="/shop/accesorios/botella" className={styles.dropdownItem}>Botella</Link>
+                            </div>
+                            </div>
                     </div>
-                </Link>
-
+                    <Link className={styles.storeLink} href="/contact">Contacto</Link>
+                </nav>
                 {/* Íconos de usuario y carrito (o botón de inicio si no hay token) */}
                 <div className={styles.icons}>
+                {/* <SearchBar/> */}
                     {isLoading ? ( // 🔥 Mostramos el loader mientras cargamos Zustand
                         <div className={styles.loader}></div>
                     ) : isAuthenticated ? (
                         <>
-                            <Link href="/profile" className={styles.icon}>
-                                <FaUser />
+                            <IoSearch className={styles.searchButton}/>
+                            <Link href="/profile">
+                                <FiUser />
                             </Link>
                             <Link href="/cart" className={styles.icon}>
-                                <FaShoppingCart />
+                                <IoBagHandleOutline />
                             </Link>
                         </>
                     ) : (
-                        <Link href="/login" className={styles.loginButton}>
-                            Iniciar sesión
-                        </Link>
+                        <>
+                            <IoSearch className={styles.searchButton}/>
+                            <Link href="/login" className={styles.icon}>
+                                <FiUser />
+                            </Link>
+                            <Link href="/cart" className={styles.icon}>
+                                <IoBagHandleOutline />
+                            </Link>
+                        </>
                     )}
                 </div>
             </div>

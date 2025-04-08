@@ -6,7 +6,7 @@ const LoginForm: React.FC<Login> = ({handleLogin,handleChange,loginData,error}) 
     return(
         <div>
             <div className={styles.container}>
-                <h4 className={styles.title}>Ingresar</h4>
+                <h4 className={styles.title}>Iniciar Sesion</h4>
                 <p className={styles.errorMessage}>{error}</p>
                 <div className={styles.inputContainer}>
                     <label className={styles.label} htmlFor="">Usuario</label>
@@ -33,7 +33,7 @@ const LoginForm: React.FC<Login> = ({handleLogin,handleChange,loginData,error}) 
                 </div>
                 <div className={styles.buttonContainer}>
                     <button className={styles.button} onClick={handleLogin}>Ingresar</button>
-                    <p className={styles.p}>Usuario nuevo?<strong><Link className={styles.link} href="/register">Registrate</Link></strong></p>
+                    <p className={styles.p}>¿No tenés cuenta aún?<strong><Link className={styles.link} href="/register"> Crear cuenta</Link></strong></p>
                 </div>
             </div>
         </div>

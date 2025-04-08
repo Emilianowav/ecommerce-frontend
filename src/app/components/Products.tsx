@@ -2,7 +2,7 @@ import fetchProducts from "@/lib/fetchProducts";
 import styles from "./Products.module.css"
 import Link from "next/link";
 import Image from "next/image";
-import { FaShoppingCart} from "react-icons/fa";
+import { IoBagHandleOutline  } from "react-icons/io5";
 
 
 
@@ -25,14 +25,13 @@ export default async function Products() {
                                 alt={product.name}
                                 fill
                             />
+                            
                         </Link>
+                        <button className={styles.addToCart}><IoBagHandleOutline/></button>
                     </div>
                     <div className={styles.sideBar}>
                         <h2 className={styles.productTitle}>{product.name}</h2>
-                        <div className={styles.priceContainer}>
-                            <p className={styles.priceValue}>${product.price}</p>
-                            <button className={styles.addToCart}>Agregar <FaShoppingCart/></button>
-                        </div>
+                        <p className={styles.priceValue}>${product.price}</p>
                     </div>
                 </li>
             ))}

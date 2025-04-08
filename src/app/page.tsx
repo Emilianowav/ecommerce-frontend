@@ -1,7 +1,5 @@
-import Header from "./components/Header";
 import { ProductsContainer } from "./components/ProductsContainer";
 import Carousel from "./components/Carousel";
-import Footer from "./components/Footer";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,7 +19,6 @@ const imagesData = [
 export default function Home() {
   return (
     <div className="">
-      <Header/>
       <div className={styles.contentContainer}>
         <section className={styles.banner}>
             <div className={styles.textContainer}>
@@ -30,7 +27,7 @@ export default function Home() {
                 <h1 className={styles.title}>Oferta Especial 3x2 en prendas deportivas </h1>
               </div>
                 <p className={styles.subtitle}>¡Solo por tiempo limitado! Equípate ahora y lleva tu rendimiento al siguiente nivel.</p>
-                <Link href="/products" className={styles.ctaButton}>
+                <Link href="/shop" className={styles.ctaButton}>
                     Ver Tienda
                     <FaStore />
                 </Link>
@@ -47,7 +44,6 @@ export default function Home() {
         <ProductsContainer/>
       </div>
       <Carousel images={imagesData}/>
-      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,49 @@
+/* Sidebar */
+.sidebar {
+    position: relative;
+    width: 250px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 4px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+}
+.categoryTitle {
+    margin-bottom: 12px;
+    border-bottom: solid black 1px;
+}
+.categoryList {
+    list-style: none;
+    padding: 0;
+}
+.categoryItem {
+    padding: 6px 0;
+    cursor: pointer;
+    padding-left: 4px;
+}
+.categoryItem:hover {
+    color: #e4fb04;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+}
+.filterTitle {
+    margin-bottom: 12px;
+    border-bottom: solid black 1px;
+}
+.filterOption {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+.filterCheckbox {
+    cursor: pointer;
+}

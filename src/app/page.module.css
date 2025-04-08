@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1a1a1a;
     color: white;
     padding: 0 40px;
     height: 85vh;
@@ -40,7 +39,7 @@
 }
 .Pretitle{
     text-transform: uppercase;
-    color: #ccc;
+    color: black;
     font-size: 14px;
 }
 .title {
@@ -49,9 +48,9 @@
     font-size: 48px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #e4fb04;
+    color: black;
     text-align: start;
-    border-bottom: solid #c3d904 2px;
+    border-bottom: solid black 2px;
     padding-bottom: 12px;
 }
 
@@ -59,7 +58,7 @@
     width: 100%;
     text-align: start;
     font-size: 1.2rem;
-    color: #ccc;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .ctaButton {
@@ -67,8 +66,8 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: #e4fb04;
-    color: #1a1a1a;
+    background-color: #DC1429;
+    color: white;
     font-weight: bold;
     padding: 12px 20px;
     text-align: center;
@@ -102,7 +101,7 @@
     border-radius: 400px;
     overflow: hidden;
     --s: 125px; /* control the size */
-    --c1: #e4fb04;
+    --c1: white;
     --c2: #DC1429;
   
     --_g: var(--c1) 90deg, var(--c2) 0 135deg, #0000 0;

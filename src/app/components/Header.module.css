@@ -1,20 +1,17 @@
-@font-face {
-    font-family: "Integral";
-    src: url(../../../public/fonts/Demo_Fonts/Integralcf-bold.otf);
-}
 .header {
     width: 100%;
     background-color: #fff;
-    padding: 16px 48px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
 }
 
 
 .container {
+    position: relative;
     margin: 0 auto;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,48 +29,98 @@
     width: 150px;
     height:40px;
 }
-
-/* Barra de búsqueda */
-.searchContainer {
+.nav {
+    position: relative;
+    height: 100%;
     display: flex;
     align-items: center;
-    border: 1px solid #DC1429;
-    border-radius: 8px;
-    overflow: hidden;
-}
+    justify-content: start;
+    gap: 16px;
+  }
 
-.searchInput {
-    border: none;
-    padding: 8px 12px;
-    width: 220px;
-    outline: none;
-}
 
-.searchButton {
-    background-color: #DC1429;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    height: 40px;
-}
-
-.searchButton:hover {
-    background-color: #c21324;
-}
-
-.storeLink{
-    font-family: "Integral";
+.storeLink {
+    position: relative;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-size: 16px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
     transition: all ease .15s;
-}
+  }
 .storeLink:hover{
     color: #DC1429;
 }
+.dropdown {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdownMenu {
+    position: fixed;
+    top: calc(10vh + 32px);
+    left: 0;
+    right: 0;
+    background-color: #DC1429;
+    color: white;
+    padding: 48px;
+  
+    /* ANIMABLES */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-in, transform .5s ease-in, visibility .5s ease-in;
+  
+    display: flex;
+    justify-content: start;
+    gap: 32px;
+    z-index: 999;
+  }
+  
+  .dropdown:hover .dropdownMenu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .storeLink .arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .dropdown:hover .arrow {
+    transform: rotate(180deg);
+  }
+  
+  .dropdownItem {
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .dropdownItem:hover {
+    scale: 1.1;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 150px;
+  }
+  
+  .columnTitle {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 4px;
+  }
+  
+  .arrow{
+    font-size: 20px;
+  }
 .storeIcon{
     font-size: 32px;
 }
@@ -81,7 +128,7 @@
 .icons {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
     font-size: 24px;
 }
 
@@ -97,6 +144,7 @@
 
 /* Botón de inicio de sesión */
 .loginButton {
+    font-size: 16px;
     background-color: #DC1429;
     color: white;
     padding: 8px 14px;
